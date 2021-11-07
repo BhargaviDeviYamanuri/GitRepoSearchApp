@@ -18,5 +18,9 @@
         android:id="@+id/RepoDetailsFragment"
         android:name="com.sample.gitreposearchapp.RepoDetailsFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_repo_details"/>
+        tools:layout="@layout/fragment_repo_details">
+        <argument
+            android:name="repoDetails"
+            app:argType="com.sample.gitreposearchapp.model.Items" />
+    </fragment>
 </navigation>

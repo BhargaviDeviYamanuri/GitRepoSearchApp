@@ -9,4 +9,12 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="no_result">No result availble to show,please try different search.</string>
+    <string name="label_id">Id</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="contribut_label">Contribute</string>
+    <string name="label_count">Count</string>
+    <string name="label_contributors">Contributors</string>
+    <string name="project_link">Project Link</string>
 </resources>
