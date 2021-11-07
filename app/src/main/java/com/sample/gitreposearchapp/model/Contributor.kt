@@ -1,9 +1,14 @@
 package com.sample.gitreposearchapp.model
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import androidx.room.TypeConverters
 import com.google.gson.annotations.SerializedName
+import com.sample.gitreposearchapp.util.ContributorConverter
 
-
+@Entity
+data class LocalContributor(@PrimaryKey val contributorUrl:String, @TypeConverters(ContributorConverter::class) val contributor: Contributor)
+@Entity
 data class Contributor(
-
 	@SerializedName("login") val login : String,
 	@SerializedName("id") val id : Int,
 	@SerializedName("node_id") val node_id : String,
