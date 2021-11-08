@@ -17,7 +17,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context=".RepoDetailsFragment">
+            tools:context=".ui.RepoDetailsFragment">
 
             <TextView
                 android:id="@+id/tvNoLabel"
@@ -160,6 +160,21 @@
                 app:layout_constraintEnd_toStartOf="@+id/glRight"
                 app:layout_constraintStart_toStartOf="@+id/glLeft"
                 app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+            <TextView
+                android:id="@+id/tvContribute"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@string/n_a"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/glRight"
+                app:layout_constraintStart_toStartOf="@id/glLeft"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelContributors"
+                tools:text="@tools:sample/full_names" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>

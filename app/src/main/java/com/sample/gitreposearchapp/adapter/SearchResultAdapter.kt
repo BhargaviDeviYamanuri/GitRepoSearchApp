@@ -6,13 +6,14 @@ import androidx.navigation.findNavController
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.sample.gitreposearchapp.HomeFragmentDirections
 import com.sample.gitreposearchapp.databinding.RepoItemLayoutBinding
 import com.sample.gitreposearchapp.model.Items
+import com.sample.gitreposearchapp.ui.HomeFragmentDirections
 
-class SearchResultAdapter:PagingDataAdapter<Items,SearchResultAdapter.RepoViewHolder>(REPO_COMPARATOR) {
-    companion object{
-        private val REPO_COMPARATOR = object : DiffUtil.ItemCallback<Items>(){
+class SearchResultAdapter :
+    PagingDataAdapter<Items, SearchResultAdapter.RepoViewHolder>(REPO_COMPARATOR) {
+    companion object {
+        private val REPO_COMPARATOR = object : DiffUtil.ItemCallback<Items>() {
             override fun areItemsTheSame(oldItem: Items, newItem: Items): Boolean {
                 return oldItem.id == newItem.id
             }
@@ -23,11 +24,14 @@ class SearchResultAdapter:PagingDataAdapter<Items,SearchResultAdapter.RepoViewHo
 
         }
     }
-    class RepoViewHolder(private val binding: RepoItemLayoutBinding): RecyclerView.ViewHolder(binding.root) {
+
+    class RepoViewHolder(private val binding: RepoItemLayoutBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun showItem(items: Items) {
             binding.searchResult = items
             binding.root.setOnClickListener {
-                it.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToRepoDetailsFragment(items))
+                it.findNavController()
+                    .navigate(HomeFragmentDirections.actionHomeFragmentToRepoDetailsFragment(items))
             }
         }
     }

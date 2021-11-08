@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".ui.HomeFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSearchResult"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -17,6 +17,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         tools:itemCount="10"
+        android:visibility="gone"
         tools:listitem="@layout/repo_item_layout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,10 +30,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/rvSearchResult"
-        app:layout_constraintEnd_toEndOf="@+id/rvSearchResult"
-        app:layout_constraintStart_toStartOf="@+id/rvSearchResult"
-        app:layout_constraintTop_toTopOf="@+id/rvSearchResult" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvNoResult"
@@ -44,8 +45,8 @@
         android:layout_marginRight="16dp"
         android:gravity="center"
         android:text="@string/no_result"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/rvSearchResult"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
